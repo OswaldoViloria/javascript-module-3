@@ -7,3 +7,9 @@
  * You can use the `export * as name from "./url-path"` command
  * to export all the modules in a file under a particular namespace
  */
+ 
+//
+import utils from "./16-exercise-fns";
+export default utils
+//
+export * as utils from "./16-exercise-fns";
