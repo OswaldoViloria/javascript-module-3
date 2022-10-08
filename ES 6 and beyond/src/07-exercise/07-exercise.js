@@ -12,12 +12,12 @@
 // Finish the code of the function
 function exercise07() {
     const func = (a, b) => {
-        a + b 
+        return a + b 
     };
 
     // Don’t change the code bellow this line
     return func;
-}
+};
 
 // Don’t change the code bellow this line
 export default exercise07;
