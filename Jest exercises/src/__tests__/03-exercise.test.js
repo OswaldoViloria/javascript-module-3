@@ -7,8 +7,9 @@ describe("03-exercises", () => {
   test("multiplyNums multiplies each number in the array by 2", () => {
     const numbers = [1, 2, 3, 4, 5];
     const expected = [2, 4, 6, 8, 10];
+    const result = multiplyNums(numbers);
 
-    expect.assertions(1);
+    expect(result).toEqual(expected);
 
     /**
      * Make an assertion that the result of executing the multiplyNums function
@@ -20,8 +21,9 @@ describe("03-exercises", () => {
 
   test("multiplyNums doesn't mutate the original array", () => {
     const numbers = [1, 2, 3, 4, 5];
+    const result = multiplyNums(numbers);
 
-    expect.assertions(1);
+    expect(result).not.toEqual(numbers);
 
     /**
      * Write an assertion that the array returned by the multiplyNums function
@@ -47,7 +49,9 @@ describe("03-exercises", () => {
       role: "ADMIN",
     };
 
-    expect.assertions(1);
+    const result = sanitizeUserData(userWithSensitiveInformation)
+
+    expect(result).toEqual(safeUserData);
 
     /**
      * Finish the test so that it checks if the result of calling

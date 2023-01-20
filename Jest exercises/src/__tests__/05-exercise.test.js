@@ -11,11 +11,9 @@ import {
  */
 describe("05-exercises", () => {
   test("addItemToList adds a new item to the initial array immutably", () => {
-    expect.assertions(1);
-
     const prevList = [1, 2, 3, 4];
     const newItem = 5;
-
+    const result = addItemToList(prevList, newItem)
     /**
      * Test that the addItemToList function adds the `newItem` variable to the
      * `prevList` array and returns an array that contains the previous elements
@@ -23,16 +21,16 @@ describe("05-exercises", () => {
      *
      * The function receives as arguments the previous array and the new item
      */
-
+    
     // Write the assertion
+    
+    expect(result).toContain(5);
   });
 
   test("addUser adds a new user to the list of users", () => {
-    expect.assertions(1);
-
     const users = [{ name: "dani" }, { name: "ana" }, { name: "andrew" }];
     const expectedUser = { name: "maria" };
-
+    const result = addUser(users, "maria")
     /**
      * Test that the addUser function returns an array of objects
      * The function is called with the `users` array as the first argument
@@ -44,15 +42,14 @@ describe("05-exercises", () => {
      * @tip
      * you need to use an array matcher that can check objects
      */
-
+    
     // Write the assertion
+    expect(result).toContainEqual(expectedUser);
   });
 
   test("getWeekDays returns an array of week days", () => {
-    expect.assertions(1);
-
     const expectedDays = ["Monday", "Tuesday"];
-
+    const result = getWeekDays()
     /**
      * Write an assertion that executing the getWeekDays function
      * returns an array of week days.
@@ -60,8 +57,9 @@ describe("05-exercises", () => {
      * You should check that the returned value matches the sub array
      * in the `expectedDays` variable
      */
-
+    
     // Write the assertion
+    expect(result).toContainEqual(expectedDays);
   });
 
   test("makeAdminUser returns an object with the role property", () => {

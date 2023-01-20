@@ -17,19 +17,36 @@
  */
 
 // Create the Person class
-class Person{
-    constructor(firtsName, lastName){
-        this.firtsName = firtsName
-        this.lastName = lastName
-    }
+class Person {
+    constructor(firstName, lastName){
+        this.firstName = firstName;
+        this.lastName = lastName}
 }
+// Create a new instance of the class with the arguments:s
+//
+// firstName: "Ana"
+// lastName: "Spark"
+//
+// Store the new instance in the `ana` variable
+let ana = new Person("Ana", "Spark");
+
+// Don’t change the code bellow this line
+export { Person, ana };
+//////////////
+// Create the Person class
+/* class Person { firstName; lastName;
+    constructor(firstName, lastName){
+        this.firstName = firstName;
+        this.lastName = lastName;}
+    }
+
 // Create a new instance of the class with the arguments:
 //
 // firstName: "Ana"
 // lastName: "Spark"
 //
 // Store the new instance in the `ana` variable
-let ana = new Person ("Ana","Spark");
+let ana = new Person("Ana", "Spark");
 
 // Don’t change the code bellow this line
-export { Person, ana };
+export { Person, ana }; */
